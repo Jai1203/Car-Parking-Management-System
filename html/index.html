@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Parking Management System</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-car"></i> Car Parking Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#register"><i class="fas fa-user-plus"></i> Register</a></li>
+                <li><a href="#login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                <li><a href="#parking"><i class="fas fa-parking"></i> Parking Slots</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Welcome to Smart Parking</h2>
+            <p>Find and reserve parking slots with ease</p>
+        </section>
+        
+        <section id="register" class="form-section">
+            <h2><i class="fas fa-user-plus"></i> Customer Registration</h2>
+            <form id="register-form">
+                <input type="text" id="reg-name" placeholder="Full Name" required>
+                <input type="tel" id="reg-mobile" placeholder="Mobile Number" required>
+                <input type="email" id="reg-email" placeholder="Email" required>
+                <input type="text" id="reg-username" placeholder="Username" required>
+                <input type="password" id="reg-password" placeholder="Password" required>
+                <textarea id="reg-address" placeholder="Address" required></textarea>
+                <button type="submit">Register</button>
+            </form>
+            <div id="register-message"></div>
+        </section>
+
+        <section id="login" class="form-section">
+            <h2><i class="fas fa-sign-in-alt"></i> Customer Login</h2>
+            <form id="login-form">
+                <input type="text" id="login-username" placeholder="Username" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div id="login-message"></div>
+        </section>
+
+        <section id="parking">
+            <h2><i class="fas fa-parking"></i> Available Parking Slots</h2>
+            <div id="parking-slots-container">
+                <img src="../images/parking-placeholder.jpg" alt="Parking Slots" class="placeholder-image">
+                <!-- Slots will be loaded here via JavaScript -->
+            </div>
+        </section>
+
+        <section id="customer-dashboard" class="hidden">
+            <h2><i class="fas fa-user-circle"></i> My Dashboard</h2>
+            <div id="customer-info"></div>
+            
+            <div id="vehicle-management">
+                <h3><i class="fas fa-car"></i> Register New Vehicle</h3>
+                <form id="vehicle-form">
+                    <select id="vehicle-make" required>
+                        <option value="" disabled selected>Select Make</option>
+                        <option value="Audi">Audi</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Bike">Bike</option>
+                        <option value="Bus">Bus</option>
+                        <option value="Chevrolet">Chevrolet</option>
+                        <option value="Fiat">Fiat</option>
+                        <option value="Ford">Ford</option>
+                        <option value="Helicopter">Helicopter</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Hyundai">Hyundai</option>
+                        <option value="Kia">Kia</option>
+                        <option value="Lamborghini">Lamborghini</option>
+                        <option value="Mahindra">Mahindra</option>
+                        <option value="Maruti Suzuki">Maruti Suzuki</option>
+                        <option value="Mercedes-Benz">Mercedes-Benz</option>
+                        <option value="Mini Cooper">Mini Cooper</option>
+                        <option value="Mitsubishi">Mitsubishi</option>
+                        <option value="Morris Garages">Morris Garages</option>
+                        <option value="Nissan">Nissan</option>
+                        <option value="Plane">Plane</option>
+                        <option value="Porsche">Porsche</option>
+                        <option value="Range Rover">Range Rover</option> 
+                        <option value="Renault">Renault</option>
+                        <option value="Scooter">Scooter</option>
+                        <option value="Skoda">Skoda</option>
+                        <option value="Tata">Tata</option>
+                        <option value="Taxi">Taxi</option>
+                        <option value="Truck">Truck</option> <!-- Added Truck -->
+                        <option value="Tesla">Tesla</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Truck">Truck</option>
+                        <option value="Volkswagen">Volkswagen</option>
+                        <option value="Volvo">Volvo</option>
+                    </select>
+                    <input type="text" id="vehicle-model" placeholder="Model" required>
+                    <input type="text" id="vehicle-year" placeholder="Year" required>
+                    <input type="text" id="vehicle-color" placeholder="Color" required>
+                    <input type="text" id="vehicle-plate" placeholder="License Plate" required>
+                    <button type="submit">Add Vehicle</button>
+                </form>
+            </div>
+
+            <div id="customer-vehicles">
+                <h3><i class="fas fa-car-side"></i> My Vehicles</h3>
+                <!-- Vehicles will be loaded here -->
+            </div>
+
+            <div id="customer-bookings">
+                <h3><i class="fas fa-calendar-check"></i> My Bookings</h3>
+                <!-- Bookings will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Car Parking Management System | <i class="fas fa-car"></i></p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
